@@ -15,7 +15,7 @@
   <style>
 /* =========================================================
    THARIGA SRI R - DATA ANALYST & BUSINESS ANALYST PORTFOLIO
-   Self-Contained Modern Glassmorphic Stylesheet
+   Clean Modern Dark Glassmorphic Theme with SVG Icons
    ========================================================= */
 :root {
   --bg-main:        #070a13;
@@ -522,11 +522,16 @@ button, input, textarea {
   padding: 12px 16px;
 }
 .c-item__icon {
-  font-size: 1.3rem;
-  padding: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
 }
+.c-item__icon svg { width: 20px; height: 20px; }
 .c-item__content strong {
   display: block;
   font-size: 0.92rem;
@@ -674,7 +679,6 @@ button, input, textarea {
   margin-bottom: 18px;
 }
 .cat-icon {
-  font-size: 1.4rem;
   width: 42px;
   height: 42px;
   display: flex;
@@ -682,7 +686,14 @@ button, input, textarea {
   justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-md);
+  color: var(--cyan);
+  flex-shrink: 0;
 }
+.cat-icon svg { width: 22px; height: 22px; }
+.cat-icon--green { color: var(--emerald); }
+.cat-icon--purple { color: var(--purple); }
+.cat-icon--amber { color: var(--amber); }
+
 .skill-category__head h3 {
   font-size: 1.15rem;
   font-weight: 700;
@@ -735,6 +746,7 @@ button, input, textarea {
   align-items: center;
   gap: 8px;
 }
+.soft-skills-head svg { width: 18px; height: 18px; color: var(--amber); }
 .soft-skills-head h4 {
   font-size: 0.9rem;
   font-weight: 700;
@@ -859,10 +871,11 @@ button, input, textarea {
   line-height: 1.5;
 }
 .p-card__list li::before {
-  content: "â–¹";
+  content: "â†’";
   position: absolute;
   left: 0;
   color: var(--cyan);
+  font-weight: 700;
 }
 .p-card__tags {
   display: flex;
@@ -991,10 +1004,11 @@ button, input, textarea {
   line-height: 1.55;
 }
 .node-achievements li::before {
-  content: "â–¹";
+  content: "â†’";
   position: absolute;
   left: 0;
   color: var(--indigo);
+  font-weight: 700;
 }
 .node-skills {
   display: flex;
@@ -1023,11 +1037,17 @@ button, input, textarea {
   transform: translateY(-3px);
 }
 .edu-icon {
-  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.04);
-  padding: 10px;
   border-radius: var(--radius-sm);
+  color: var(--cyan);
+  flex-shrink: 0;
 }
+.edu-icon svg { width: 24px; height: 24px; }
 .edu-dates {
   font-size: 0.75rem;
   font-family: var(--font-mono);
@@ -1067,11 +1087,17 @@ button, input, textarea {
   transform: translateY(-3px);
 }
 .cred-icon {
-  font-size: 1.8rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.04);
-  padding: 8px;
   border-radius: var(--radius-sm);
+  color: var(--cyan);
+  flex-shrink: 0;
 }
+.cred-icon svg { width: 22px; height: 22px; }
 .cred-issuer {
   font-size: 0.75rem;
   font-family: var(--font-mono);
@@ -1099,11 +1125,17 @@ button, input, textarea {
   align-items: center;
 }
 .leader-icon {
-  font-size: 2.2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(245, 158, 11, 0.15);
-  padding: 12px;
   border-radius: var(--radius-md);
+  color: var(--amber);
+  flex-shrink: 0;
 }
+.leader-icon svg { width: 28px; height: 28px; }
 .leader-badge {
   font-size: 0.72rem;
   font-family: var(--font-mono);
@@ -1248,11 +1280,11 @@ button, input, textarea {
   .form-row { grid-template-columns: 1fr; }
 }
 
-/* Footer */
+/* Clean Footer (Without Copyright) */
 .site-footer {
   background: var(--bg-darker);
   border-top: 1px solid var(--border-light);
-  padding: 40px 24px 24px;
+  padding: 32px 24px;
   position: relative;
   z-index: 1;
 }
@@ -1264,8 +1296,6 @@ button, input, textarea {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-light);
 }
 .footer-brand {
   display: flex;
@@ -1286,13 +1316,6 @@ button, input, textarea {
   color: var(--text-secondary);
 }
 .footer-links a:hover { color: var(--cyan); }
-.footer-bottom {
-  max-width: var(--container-max);
-  margin: 20px auto 0;
-  text-align: center;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
 
 /* Badges */
 .badge {
@@ -1458,14 +1481,17 @@ button, input, textarea {
           <div class="competency-card">
             <div class="competency-card__header">
               <div class="competency-card__title">
-                <span class="icon">ðŸ“Š</span> Core Competencies
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--cyan);"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                Core Competencies
               </div>
               <span class="badge badge--cyan">DA &amp; BA Skills</span>
             </div>
 
             <div class="competency-items">
               <div class="c-item">
-                <div class="c-item__icon icon--blue">ðŸ“ˆ</div>
+                <div class="c-item__icon" style="color: var(--cyan);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
                 <div class="c-item__content">
                   <strong>Data Analytics &amp; Visualization</strong>
                   <p>SQL, Python (Pandas, NumPy), Data Cleaning, EDA, Power BI, DAX, Excel</p>
@@ -1473,7 +1499,9 @@ button, input, textarea {
               </div>
 
               <div class="c-item">
-                <div class="c-item__icon icon--purple">ðŸ“‘</div>
+                <div class="c-item__icon" style="color: var(--purple);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
                 <div class="c-item__content">
                   <strong>Business Analysis</strong>
                   <p>Requirement Gathering, BRD, FRD, Business Documentation, Reporting</p>
@@ -1481,7 +1509,9 @@ button, input, textarea {
               </div>
 
               <div class="c-item">
-                <div class="c-item__icon icon--green">ðŸ”„</div>
+                <div class="c-item__icon" style="color: var(--emerald);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                </div>
                 <div class="c-item__content">
                   <strong>Methodologies &amp; Tools</strong>
                   <p>Agile, Scrum, SDLC, Jira, Microsoft Word, CRUD Operations</p>
@@ -1489,7 +1519,9 @@ button, input, textarea {
               </div>
 
               <div class="c-item">
-                <div class="c-item__icon icon--amber">ðŸ¤–</div>
+                <div class="c-item__icon" style="color: var(--amber);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+                </div>
                 <div class="c-item__content">
                   <strong>Machine Learning &amp; NLP</strong>
                   <p>XGBoost, Scikit-Learn, VADER, RoBERTa, FastAPI, Firebase</p>
@@ -1572,7 +1604,9 @@ button, input, textarea {
           <!-- 1. Data Analytics -->
           <div class="skill-category">
             <div class="skill-category__head">
-              <div class="cat-icon cat-icon--blue">ðŸ“Š</div>
+              <div class="cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </div>
               <div>
                 <h3>Data Analytics</h3>
                 <span class="cat-sub">Core Analytics &amp; Querying</span>
@@ -1592,7 +1626,9 @@ button, input, textarea {
           <!-- 2. Tools & Business Intelligence -->
           <div class="skill-category">
             <div class="skill-category__head">
-              <div class="cat-icon cat-icon--green">ðŸ› ï¸</div>
+              <div class="cat-icon cat-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
               <div>
                 <h3>Tools &amp; BI</h3>
                 <span class="cat-sub">Visualization &amp; Reporting</span>
@@ -1613,7 +1649,9 @@ button, input, textarea {
           <!-- 3. Business Analysis -->
           <div class="skill-category">
             <div class="skill-category__head">
-              <div class="cat-icon cat-icon--purple">ðŸ“‘</div>
+              <div class="cat-icon cat-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
               <div>
                 <h3>Business Analysis</h3>
                 <span class="cat-sub">Requirements &amp; Documentation</span>
@@ -1632,7 +1670,9 @@ button, input, textarea {
           <!-- 4. Methodologies & CS -->
           <div class="skill-category">
             <div class="skill-category__head">
-              <div class="cat-icon cat-icon--amber">âš™ï¸</div>
+              <div class="cat-icon cat-icon--amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
               <div>
                 <h3>Methodologies &amp; CS</h3>
                 <span class="cat-sub">Engineering Foundations</span>
@@ -1655,7 +1695,7 @@ button, input, textarea {
         <!-- Soft Skills Card -->
         <div class="soft-skills-card">
           <div class="soft-skills-head">
-            <span class="icon">ðŸ’¡</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/></svg>
             <h4>Soft Skills:</h4>
           </div>
           <div class="soft-skills-list">
@@ -1695,7 +1735,7 @@ button, input, textarea {
           <article class="p-card p-card--featured" data-category="bi">
             <div class="p-card__header-bar p-card__header-bar--covid">
               <div class="p-card__tag-bar">
-                <span class="badge badge--star">â­ Power BI Dashboard</span>
+                <span class="badge badge--star">Power BI Dashboard</span>
                 <span class="badge badge--dark">Personal Project &middot; 2025</span>
               </div>
               <h3 class="p-card__title">COVID-19 Power BI Dashboard</h3>
@@ -1811,7 +1851,7 @@ button, input, textarea {
           <article class="p-card" data-category="python ml">
             <div class="p-card__header-bar p-card__header-bar--cycle">
               <div class="p-card__tag-bar">
-                <span class="badge badge--green">Academic Project &middot; 2026</span>
+                <span class="badge badge--cyan">Academic Project &middot; 2026</span>
               </div>
               <h3 class="p-card__title">CycleIQ &mdash; Menstrual Cycle Prediction System</h3>
               <p class="p-card__stack">Python &middot; FastAPI &middot; XGBoost &middot; Flutter &middot; Firebase</p>
@@ -1961,7 +2001,9 @@ button, input, textarea {
         <div class="education-grid">
           <!-- College -->
           <div class="edu-card">
-            <div class="edu-icon">ðŸŽ“</div>
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
             <div class="edu-body">
               <span class="edu-dates">Graduation: May 2026</span>
               <h3>B.E. in Computer Science Engineering</h3>
@@ -1974,7 +2016,9 @@ button, input, textarea {
 
           <!-- School -->
           <div class="edu-card">
-            <div class="edu-icon">ðŸ«</div>
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 11h.01M15 11h.01M9 15h.01M15 15h.01"></path></svg>
+            </div>
             <div class="edu-body">
               <span class="edu-dates">Completed: May 2022</span>
               <h3>Higher Secondary Education</h3>
@@ -1994,14 +2038,16 @@ button, input, textarea {
         <div class="section__header text-center">
           <div class="section-tag">Credentials &amp; Activities</div>
           <h2 class="section__title">Certifications &amp; <span class="gradient-text">Leadership</span></h2>
-          <p class="section__subtitle">Verified certifications (ordered: Data Analysis &rarr; Python &rarr; SDLC) and leadership activities.</p>
+          <p class="section__subtitle">Verified certifications and leadership activities.</p>
         </div>
 
         <!-- Certifications Ordered: Data Analyst -> Python -> SDLC -->
         <div class="credentials-grid credentials-grid--4">
           <!-- 1. Data Analyst (QSpiders) -->
           <div class="cred-card">
-            <div class="cred-icon">ðŸ“Š</div>
+            <div class="cred-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
             <div class="cred-body">
               <span class="cred-issuer">QSpiders</span>
               <h3>Data Analyst</h3>
@@ -2011,7 +2057,9 @@ button, input, textarea {
 
           <!-- 2. Data Analysis (GrowAI) -->
           <div class="cred-card">
-            <div class="cred-icon">ðŸ“ˆ</div>
+            <div class="cred-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
             <div class="cred-body">
               <span class="cred-issuer">GrowAI</span>
               <h3>Data Analysis Certification</h3>
@@ -2021,7 +2069,9 @@ button, input, textarea {
 
           <!-- 3. Advanced Python (FITA) -->
           <div class="cred-card">
-            <div class="cred-icon">ðŸ</div>
+            <div class="cred-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
             <div class="cred-body">
               <span class="cred-issuer">FITA Academy</span>
               <h3>Advanced Python</h3>
@@ -2031,7 +2081,9 @@ button, input, textarea {
 
           <!-- 4. SDLC (DELQ) -->
           <div class="cred-card">
-            <div class="cred-icon">ðŸ“œ</div>
+            <div class="cred-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
             <div class="cred-body">
               <span class="cred-issuer">DELQ Solutions</span>
               <h3>SDLC: Revolutionizing Project Management &amp; Software Delivery</h3>
@@ -2042,7 +2094,9 @@ button, input, textarea {
 
         <!-- Leadership Highlight -->
         <div class="leadership-banner">
-          <div class="leader-icon">ðŸ†</div>
+          <div class="leader-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
           <div class="leader-text">
             <span class="leader-badge">LEADERSHIP &amp; ACTIVITIES</span>
             <h3>Global AI Leaders Summit 2025 (GAILS) &middot; IIT Madras</h3>
@@ -2067,7 +2121,7 @@ button, input, textarea {
               <!-- Phone -->
               <div class="c-info-item">
                 <div class="c-info-icon">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </div>
                 <div>
                   <span class="c-info-label">Phone Number</span>
@@ -2150,7 +2204,7 @@ button, input, textarea {
 
   </main>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- ============ FOOTER (NO COPYRIGHT) ============ -->
   <footer class="site-footer">
     <div class="site-footer__container">
       <div class="footer-brand">
@@ -2167,9 +2221,6 @@ button, input, textarea {
         <a href="mailto:tharigasri15@gmail.com">Email</a>
         <a href="https://drive.google.com/file/d/1pHrZcR_sdCj5STaBWAZReaPFhBb8DLj7/view?usp=sharing" target="_blank" rel="noopener">Resume PDF</a>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Thariga Sri R &middot; Computer Science Engineering Graduate</p>
     </div>
   </footer>
 
